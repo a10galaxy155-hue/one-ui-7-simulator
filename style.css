@@ -1,0 +1,51 @@
+:root {
+  --bg-blur: blur(20px) saturate(180%);
+  --panel-bg: rgba(255, 255, 255, 0.7);
+  --radius: 30px;
+}
+
+.phone-frame {
+  width: 360px;
+  height: 740px;
+  background: url('oneui7-wallpaper.jpg') center/cover;
+  border: 12px solid #222;
+  border-radius: 40px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Rounded "Focus Block" Containers */
+.panel {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  background: var(--panel-bg);
+  backdrop-filter: var(--bg-blur);
+  border-radius: 0 0 var(--radius) var(--radius);
+  transition: top 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  padding: 20px;
+}
+
+.now-bar {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 12px;
+}
+
+.app-icon .icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 22px; /* The One UI Squircle */
+  margin-bottom: 5px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
